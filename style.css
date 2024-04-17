@@ -1,0 +1,75 @@
+/*@font-face {
+	font-family: 'Pinyon';
+	src: url('/files/typo/PinyonScript-Regular.ttf') format('truetype');
+}*/
+
+:root {
+  --padding: 50px;
+
+  --main-font-size: 1.2rem;
+  --little-font-size: 1.5rem;
+  --title-font-size: 2.5rem;
+
+  --big-line-height: 3rem;
+
+  --color-violet: #3F3A3A;
+  --color-light: #8DA264;
+  --color-text: lightgrey;
+  --color-background: #58261b;
+
+  --font-family-main: Trebuchet MS, sans-serif;
+  --arial-letter-spacing: 0.2px;
+  --font-style-italic: italic;
+  --font-family-italic: New Century Schoolbook, TeX Gyre Schola, serif;
+
+}
+body{
+    margin: 0;
+}
+
+.titre{
+    position: fixed;
+    top: 10px;
+    left: 10%;
+    font-size: var(--title-font-size);
+    z-index: -10;
+}
+.titre :first-child{
+        font-family: var(--font-family-italic);
+    font-style: var(--font-style-italic);
+    text-shadow: white 0px 0px 2px, white 0px 0px 2px, white 0px 0px 2px, white 0px 0px 2px, magenta 0px 0px 53px, magenta 0px 0px 53px, magenta 0px 0px 53px, magenta 0px 0px 53px, magenta 0px 0px 53px, magenta 0px 0px 53px, magenta 0px 0px 53px, magenta 0px 0px 53px;
+    color: #f197d2;
+    position: sticky;
+    top: 10px;
+/*     margin-top: var(--padding); */
+/*     transform: rotate(5deg); */
+}
+.titre :nth-child(2){
+        font-family: var(--font-family-italic);
+    font-style: var(--font-style-italic);
+    text-shadow: black 0px 0px 3px, black 0px 0px 3px, black 0px 0px 3px, black 0px 0px 7px, black 0px 0px 7px, black 0px 0px 7px, black 0px 0px 7px, black 0px 0px 7px, black 0px 0px 7px;
+    color: white;
+    position: sticky;
+    top: 10px;
+}
+
+.conteneur-grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    top: 100px;
+    position: fixed;
+    gap: 10px;
+    font-size: 0.8rem;
+}
+
+.intro{
+     background: lightyellow;
+}
+main{
+    top:800px;
+    position: relative;
+    z-index:10;
+    width: 60%;
+    margin: auto;
+    background:white;
+}
