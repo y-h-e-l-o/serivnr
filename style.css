@@ -107,20 +107,43 @@ margin-left: 10%;*/
     font-family:sans-serif;
 }
 /* Media query pour les écrans de petite taille (smartphones) */
+
 @media screen and (max-width: 600px) {
 
+    body{
+        width: 100vw;
+        overflow-x: hidden;
+    }
     .titre{
-        font-size: var(--little-font-size);
+        font-size: var(--title-font-size);
         z-index: 100;
     }
     .conteneur-grid{
+        width: 100vw;
         grid-template-columns: repeat(1, 1fr);
     }
     main{
-        width:80%;
-
+        width:85%;
     }
     main > p{
         text-align: center;
     }
+    .title{
+        font-size: 1.7rem;
+    }
+    .bloc-img> img{
+        width: 250px;
+    }
+    .mail{
+transform: translate(0, -50px);
+    }
+
+.text{
+    width: 100%;
+text-align: left;
+padding: 10px;
+}
+.fr{
+    float: none;
+}
 }
