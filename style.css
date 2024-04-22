@@ -1,14 +1,18 @@
-/*@font-face {
+@font-face {
 	font-family: 'Pinyon';
 	src: url('/files/typo/PinyonScript-Regular.ttf') format('truetype');
-}*/
+}
+@font-face {
+	font-family: 'Garamondt';
+	src: url('/files/typo/Garamondt-Italic.otf') format('opentype');
+}
 
 :root {
-  --padding: 50px;
+  --padding: 15px;
 
-  --main-font-size: 1.2rem;
+  --main-font-size: 1rem;
   --little-font-size: 1.5rem;
-  --title-font-size: 2.5rem;
+  --title-font-size: 3rem;
 
   --big-line-height: 3rem;
 
@@ -20,21 +24,28 @@
   --font-family-main: Trebuchet MS, sans-serif;
   --arial-letter-spacing: 0.2px;
   --font-style-italic: italic;
-  --font-family-italic: New Century Schoolbook, TeX Gyre Schola, serif;
+  --font-family-italic: 'Garamondt' /*New Century Schoolbook, TeX Gyre Schola, serif*/;
 
 }
 body{
     margin: 0;
+    background-color: lightyellow;
 }
-
+.ornement{
+    font-size: 9rem;
+    position: fixed;
+    top: 300px;
+    left: 70%;
+}
 .titre{
     position: fixed;
     top: 10px;
-    left: 10%;
+    left: 10px;
     font-size: var(--title-font-size);
-    z-index: 100;
+    z-index: 1000;
+/*    opacity: 0.6;*/
 }
-.titre :first-child{
+.titre :nth-child(2n){
         font-family: var(--font-family-italic);
     font-style: var(--font-style-italic);
     text-shadow: white 0px 0px 2px, white 0px 0px 2px, white 0px 0px 2px, white 0px 0px 2px, magenta 0px 0px 53px, magenta 0px 0px 53px, magenta 0px 0px 53px, magenta 0px 0px 53px, magenta 0px 0px 53px, magenta 0px 0px 53px, magenta 0px 0px 53px, magenta 0px 0px 53px;
@@ -44,7 +55,7 @@ body{
 /*     margin-top: var(--padding); */
 /*     transform: rotate(5deg); */
 }
-.titre :nth-child(2){
+.titre :nth-child(2n){
         font-family: var(--font-family-italic);
     font-style: var(--font-style-italic);
     text-shadow: black 0px 0px 3px, black 0px 0px 3px, black 0px 0px 3px, black 0px 0px 7px, black 0px 0px 7px, black 0px 0px 7px, black 0px 0px 7px, black 0px 0px 7px, black 0px 0px 7px;
@@ -56,22 +67,47 @@ body{
 .conteneur-grid{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    top: 100px;
+    top: 50px;
     position: fixed;
     gap: 10px;
-    font-size: 0.8rem;
+    font-size: var(--main-font-size);
 }
 
 .intro{
-     background: lightyellow;
+   /*  background: lightyellow;*/
+     padding: var(--padding);
 }
 main{
     top:800px;
     position: relative;
     z-index:10;
-    width: 60%;
+    width: 90%;
+    padding:var(--padding);
     margin: auto;
     background:white;
+
+}
+
+.text{
+    width: 50%;
+text-align: justify;
+padding: 50px;
+}
+.fr{
+    float: right;
+}
+
+/*.bloc-img{
+/*/*    margin: 30px 0 30px 0;*/
+margin-left: 10%;*/
+}*/
+.bloc-img> img{
+    padding-left: 2%;
+    padding-bottom: 50px;
+}
+.title{
+    font-size:var(--title-font-size);
+    font-family:sans-serif;
 }
 /* Media query pour les écrans de petite taille (smartphones) */
 @media screen and (max-width: 600px) {
@@ -85,5 +121,9 @@ main{
     }
     main{
         width:80%;
+
+    }
+    main > p{
+        text-align: center;
     }
 }
