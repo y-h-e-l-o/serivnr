@@ -1,7 +1,7 @@
 
 @font-face {
 	font-family: 'Garamondt';
-	src: url('/files/typo/Garamondt-Italic.otf') format('opentype');
+	src: url('files/typo/Garamondt-Italic.otf') format('opentype');
 }
 
 :root {
