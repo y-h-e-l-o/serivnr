@@ -1,7 +1,4 @@
-@font-face {
-	font-family: 'Pinyon';
-	src: url('/files/typo/PinyonScript-Regular.ttf') format('truetype');
-}
+
 @font-face {
 	font-family: 'Garamondt';
 	src: url('/files/typo/Garamondt-Italic.otf') format('opentype');
